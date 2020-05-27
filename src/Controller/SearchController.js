@@ -22,18 +22,12 @@ export default async function SearchController(name, birth, navigation) {
     const timePeriodTwo = decade.replace(/(\D)/g, ',').split(',')[2];
     const period = timePeriodOne + ' ' + timePeriodTwo;
 
+    const description = 'Os anos que mais nasceram ' + getName + ' foram ' + period;
+
     if(timePeriodOne <= birth && timePeriodTwo >= birth) {
-
         const description = 'A sua década foi a que mais nasceu ' + getName;
-        
-        await AsyncStorage.setItem('description', description);
-
-        return navigation.navigate('Search', { header: null });
     }
 
-
-    const description = 'Os anos que mais nasceram ' + getName + ' foram ' + period;
     await AsyncStorage.setItem('description', description);
-
     return navigation.navigate('Search', { header: null });
 }

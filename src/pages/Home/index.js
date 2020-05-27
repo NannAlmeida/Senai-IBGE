@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, KeyboardAvoidingView, TouchableOpacity, TextInput, Picker } from 'react-native';
+import { View, Text, KeyboardAvoidingView, TouchableOpacity, TextInput } from 'react-native';
 
-import Style from './style';
+import Style from './home-style';
 import Logo from '../../assets/logo';
 import SearchController from '../../Controller/SearchController';
 
-// function getYear() {
-//     const date = new Date();
-//     const array = [];
-
-//     for(let i = 1930; i < date.getFullYear(); i++) {
-//         array[i] = (<Picker.Item label={i} value={i} />);
-//     }
-
-//     return array;
-// }
-
 export default function Home({ navigation }) {
-
     const [welcome, setWelcome] = useState('');
-    
     const [name, setName] = useState('');
     const [year, setYear] = useState(0);
 

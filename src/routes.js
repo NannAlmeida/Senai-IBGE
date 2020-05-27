@@ -1,9 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-
 import Home from './pages/Home';
 import Search from './pages/Search';
-
 const Routes = createAppContainer(
     createStackNavigator({
         Home: {
@@ -12,7 +10,6 @@ const Routes = createAppContainer(
                 header: null
             }
         },
-
         Search: {
             screen: Search,
             navigationOptions: {
